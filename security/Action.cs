@@ -34,7 +34,7 @@ namespace security
                 WebClient w = new WebClient();
                 w.Headers["User-Agent"] = security.Settings.useragent;
                 w.Headers["Content-Type"] = "application/x-www-form-urlencoded";
-                Byte[] r = w.UploadValues(security.Settings.getServer(),
+                Byte[] r = w.UploadValues(security.Settings.getServer(),Settings.requestType,
               new NameValueCollection()
                 {
                   { Settings.login,user },
